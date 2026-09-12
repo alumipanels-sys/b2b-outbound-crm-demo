@@ -6,7 +6,7 @@
 
 ## Try it live (no download required)
 
-**Live demo:** http://38.54.63.88:8011
+**Live demo:** https://demo.goprospectflow.com/
 
 Demo login: `demo@demo.com` / `demo123456`
 
