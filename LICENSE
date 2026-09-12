@@ -1,0 +1,49 @@
+Business Source License 1.1
+
+License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
+"Business Source License" is a trademark of MariaDB Corporation Ab.
+
+-----------------------------------------------------------------------------
+
+Parameters
+
+Licensor:             alumipanels-sys
+Licensed Work:        B2B Outbound OS
+The Licensed Work is (c) 2026 alumipanels-sys
+Additional Use Grant: You may use the Licensed Work free of charge for
+                      evaluation, learning and personal or internal
+                      non-commercial purposes, and you may redistribute the
+                      unmodified Licensed Work free of charge. Any production
+                      or commercial use of the Licensed Work, including but
+                      not limited to operating it for a business, selling or
+                      reselling it, charging for hosting or setup of the
+                      Licensed Work, or distributing it as part of a paid
+                      product or service, requires a separate paid commercial
+                      license from the Licensor (one-time fee, currently
+                      USD 99; contact alumipanels@gmail.com or visit
+                      https://goprospectflow.com).
+Change Date:          2030-01-01
+Change License:       Apache License, Version 2.0
+
+-----------------------------------------------------------------------------
+
+Terms
+
+The Licensor hereby grants you the right to copy, modify, create derivative
+works, redistribute, and make non-production use of the Licensed Work. The
+Licensor may make an Additional Use Grant, above, permitting limited
+production use.
+
+Effective on the Change Date, or the fourth anniversary of the first
+publicly available distribution of a specific version of the Licensed Work
+under this License, whichever comes first, the Licensor hereby grants you
+rights under the terms of the Change License, and the rights granted under
+the Additional Use Grant, if applicable, will automatically terminate.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
