@@ -48,8 +48,11 @@ Demo login: `demo@demo.com` / `demo123456`
 
 ## Get the full self-hosted version
 
+This is the official public overview of **B2B Outbound OS**, maintained by the author.
+
 - Gumroad store: https://crmlokal.gumroad.com/
 - Homepage: https://goprospectflow.com
+- Support: alumipanels@gmail.com
 
 ## FAQ
 
