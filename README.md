@@ -1,16 +1,54 @@
-# B2B Outbound OS — Self-Hosted Outbound CRM
+# B2B Outbound OS — Self-Hosted Outbound CRM (Free Demo Build)
 
-**B2B Outbound OS** is a self-hosted outbound sales CRM for B2B and export teams: AI prospect scoring, customer research, multi-step outreach plans, automatic follow-up, deals pipeline, team dashboard, and a knowledge base that teaches the AI about your business.
+> Prospect. Reach. Follow up. Close.
 
-> $99 one-time · No subscription · Your data stays on your machine
+This repository is the **full application source of B2B Outbound OS**, and it
+ships with a **sample workspace**, so you can start it and click through a
+realistic pipeline in a couple of minutes.
 
-## Try it live (no download required)
+**Demo login:** `demo@demo.com` / `demo123456`
+**Live demo (nothing to install):** https://demo.goprospectflow.com/
 
-**Live demo:** https://demo.goprospectflow.com/
+B2B Outbound OS is a self-hosted CRM for B2B outbound sales development. It turns
+a raw customer list into a managed pipeline: AI scoring tells you which customers
+deserve your time, research builds context before the first touch, outreach plans
+keep every step organized, and an automatic follow-up engine makes sure nobody
+falls through the cracks. Email, LinkedIn and WhatsApp are channels you connect —
+B2B Outbound OS handles the pipeline, follow-up and deal tracking, while you keep
+your own sending accounts and deliverability.
 
-Demo login: `demo@demo.com` / `demo123456`
+**Not an email blaster.** It is the workflow layer that sits in front of your own
+mailboxes and keeps your team moving customers forward.
 
-> This repository is a public product overview. The complete source code, installers and the illustrated English setup guide are included with the paid self-hosted license.
+Homepage: **https://goprospectflow.com**
+
+## What ships in this build
+
+- The complete application (Python + FastAPI, SQLite, no build step)
+- A sample workspace: **81 demo companies** across 14 countries, 170+ email
+  interactions, 22 deals, 60 scheduled touches and a pre-filled knowledge base
+- Five demo users (1 owner + 4 sales reps), so the team dashboard has something
+  to show
+- One-click installers for Windows / macOS / Linux
+- Sample data you can restore at any time from **System Settings → Reset demo data**
+
+No telemetry, no accounts, no subscription. It runs on your machine and your data
+never leaves it.
+
+## Add your own AI key to unlock the AI features
+
+The demo starts without any API key, so the AI is off until you switch it on.
+Put your own key in **System Settings → AI configuration** (Gemini, DeepSeek or
+OpenAI — one is enough), restart, and these start working **on the demo data**:
+
+- AI scoring of every customer (0–100, plus A–E value tiers)
+- Customer research: website / LinkedIn / hiring signals
+- Cold email and LinkedIn message generation from the built-in skills
+- Reply-intent analysis and AI quality checks on drafts
+- AI quote extraction and customer-profile coaching
+
+Your key stays in the local `.env` file; the model bills you directly at provider
+prices (usually cents per campaign). There is no fee from us and no markup.
 
 ## Screenshots
 
@@ -22,55 +60,127 @@ Demo login: `demo@demo.com` / `demo123456`
 |---|---|---|
 | ![](docs/screenshots/email.png) | ![](docs/screenshots/deals.png) | ![](docs/screenshots/knowledge.png) |
 
-| Data Analytics | System Settings |
-|---|---|
-| ![](docs/screenshots/analytics.png) | ![](docs/screenshots/setup.png) |
+| Data Analytics | System Settings | |
+|---|---|---|
+| ![](docs/screenshots/analytics.png) | ![](docs/screenshots/setup.png) | |
 
-## What's inside (full version)
+## Quick start
 
-- Customer pipeline with AI scoring and value tiers
-- Customer research: website, LinkedIn and hiring signals
-- Multi-step outreach plans with decision-chain ordering
-- Follow-up engine with no-reply rules and cooling periods
-- Deals pipeline, sample tracking and quote history
-- Knowledge base that teaches the AI about your business
-- Team dashboard and audit log
-- Email center as one connected channel
-- Local SQLite database + encrypted backups
+**Requirements:** Python **3.10** (free) — nothing else.
 
-## Why teams choose it
+1. Install Python 3.10 from https://www.python.org/downloads/ and tick
+   *"Add python.exe to PATH"* during setup.
+2. Download or clone this repository.
+3. Windows: double-click `install.bat`, then `start.bat`.
+   macOS / Linux: run `bash install_mac.sh`, then `bash start.sh`.
+4. Your browser opens on http://localhost:8010 — log in with
+   `demo@demo.com` / `demo123456`.
 
-- **$99 one-time, no subscription, no renewal**
-- **Self-hosted** on Windows / macOS / Linux — your data never leaves your machine
-- **Bring your own AI key**: Gemini / DeepSeek / OpenAI
-- **Connect your own SMTP/IMAP mailbox** (Gmail app password supported)
-- **Team seats included** — add sales reps and members free
+`start.bat` also installs the Python dependencies if you skip `install.bat`.
 
-## Get the full self-hosted version
+## What's inside
 
-This is the official public overview of **B2B Outbound OS**, maintained by the author.
+1. Customer pipeline with AI scoring and value tiers (A–E)
+2. Customer research: website, LinkedIn and hiring signals
+3. Multi-step outreach plans with decision-chain ordering
+4. Follow-up engine with no-reply rules and cooling periods
+5. Deals pipeline, sample tracking and quote history
+6. Knowledge base that teaches the AI about your business
+7. Team dashboard, per-rep daily targets and audit log
+8. Email center: drafts, queue, scheduled sending, inbox, bounce detection
 
-- Gumroad store: https://crmlokal.gumroad.com/
-- Homepage: https://goprospectflow.com
-- Support: alumipanels@gmail.com
+## First-time configuration
 
-## FAQ
+Open **System Settings** and work through the wizard:
 
-**Q: Where is the source code?**
-A: The complete source code, installers and the illustrated English setup guide are included with the $99 self-hosted license. This repository is a public product overview and does not contain the runnable product.
+1. **Company info** — name, your name, email, website
+2. **AI configuration** — any one of Gemini / DeepSeek / OpenAI
+3. **Sending mailbox (SMTP)** — e.g. Gmail with an app password
+4. **Receiving mailbox (IMAP)** — same mailbox, used to fetch replies
+5. **Knowledge base** — tell the AI what you sell and who you target
 
-**Q: Why self-hosted?**
-A: Your customer data, emails and backups stay on your own computer or server. No vendor cloud, no per-seat subscription, no lock-in.
+AI and mailbox changes take effect after restarting the system.
 
-**Q: Which email providers work?**
-A: Any SMTP/IMAP mailbox: Gmail (app password), Outlook, Zoho, company mail, and more.
+### Using Gmail
 
-**Q: How much does the AI cost?**
-A: You bring your own Gemini / DeepSeek / OpenAI key and pay the provider directly — usually only cents per campaign. No fees to us.
+Enable IMAP in Gmail settings and create an app password (2-step verification is
+required). Use:
 
-**Q: Is this an email blaster?**
-A: No. It is the workflow layer that sits in front of your own mailboxes: prospect scoring, research, outreach plans, follow-up and deal tracking.
+- SMTP server `smtp.gmail.com`, port `465`
+- IMAP server `imap.gmail.com`, port `993`
+
+Paste the 16-character app password, not your normal Gmail password.
+
+## Privacy & keys
+
+- No API keys are bundled. You supply your own and pay the provider directly.
+- SMTP / IMAP / AI keys live only in the local `.env` file on your machine.
+- The app only touches the network when it deliberately sends or receives email,
+  or calls the AI provider you configured. No telemetry, nothing phones home.
+- The full source is in this repository, so you (or your developer) can read
+  exactly what it does before connecting a mailbox or an AI key.
+
+## Demo build vs. commercial license
+
+| | This demo build | Commercial license — USD 99 one-time |
+|---|---|---|
+| Application source | ✅ | ✅ |
+| Sample workspace | ✅ | clean, empty workspace |
+| Evaluation and personal use | ✅ | ✅ |
+| Production / business use | ❌ needs a license | ✅ |
+| Illustrated English setup guide | — | ✅ |
+| AI install / update prompts for Codex & Claude Code | — | ✅ |
+| Updates for 1 year + setup support | — | ✅ |
+
+One payment, no subscription, no renewal, team seats included.
+
+**Buy the commercial license:** https://crmlokal.gumroad.com/
 
 ## License
 
-Business Source License 1.1 (BSL 1.1). Production or commercial use requires a paid license. See [LICENSE](LICENSE) for details.
+Business Source License 1.1 (BSL 1.1) — see [LICENSE](LICENSE) for the full text.
+
+In short:
+
+- Free to read, run, modify and evaluate, free for personal or internal
+  non-commercial use, and you may redistribute the unmodified build at no charge.
+- **Production or commercial use** (running it for a business, reselling it, or
+  charging for hosting or setup) requires the one-time **USD 99** commercial
+  license: https://crmlokal.gumroad.com/
+- On **2030-01-01** this project automatically converts to the
+  **Apache License 2.0**.
+
+## FAQ
+
+**Is this really free?**
+Yes — this build is free to download, run and evaluate. A commercial license
+(USD 99 one-time) is required if you run it in a business.
+
+**Do I need to be technical?**
+No. Install Python 3.10, double-click two files, and you are in. The paid version
+adds an illustrated guide plus one-prompt installers for Codex / Claude Code.
+
+**Which email providers work?**
+Any SMTP/IMAP mailbox: Gmail (app password), Outlook, Zoho, your company mail.
+
+**What does the AI cost?**
+You bring your own Gemini / DeepSeek / OpenAI key and pay the provider directly —
+usually a few cents per campaign. There are no fees from us.
+
+**Where is my data?**
+In a local SQLite database next to the app, on your own machine. Backups are local
+too, and can be encrypted.
+
+**Is the demo data real?**
+No. Every company, contact and interaction in the sample workspace is fictional
+and generated for demonstration.
+
+## Support & contact
+
+- Website: https://goprospectflow.com
+- Email: alumipanels@gmail.com
+- Questions and bug reports: please open an issue in this repository
+
+## Contributing & changelog
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [CHANGELOG.md](CHANGELOG.md).

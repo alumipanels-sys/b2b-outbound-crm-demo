@@ -1,0 +1,27 @@
+# Local secrets and environment
+.env
+
+# Databases, logs and runtime artifacts
+*.db
+*.db-*
+# ...except the demo database that ships with this evaluation build
+!prospect.db
+*.sqlite
+*.sqlite3
+*.log
+preview.out.log
+preview.err.log
+__pycache__/
+*.py[cod]
+
+# Local data folders (keep them out of the repo)
+attachments/
+backups/
+sent_archive/
+
+# Internal translation tracker (not part of the public project)
+翻译进度.md
+
+# OS files
+.DS_Store
+Thumbs.db
