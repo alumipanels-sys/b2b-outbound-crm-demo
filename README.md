@@ -1,52 +1,40 @@
-# B2B Outbound OS — Self-Hosted Outbound CRM (Free Demo Build)
-
-> Prospect. Reach. Follow up. Close.
-
-This repository is the **full application source of B2B Outbound OS**, and it
-ships with a **sample workspace**, so you can start it and click through a
-realistic pipeline in a couple of minutes.
+# B2B Outbound OS — Self-Hosted B2B Outbound System (Free Demo Build)
 
 **Demo login:** `demo@demo.com` / `demo123456`
 **Live demo (nothing to install):** https://demo.goprospectflow.com/
+**This repository contains the complete application source, plus a sample workspace.**
 
-B2B Outbound OS is a self-hosted CRM for B2B outbound sales development. It turns
-a raw customer list into a managed pipeline: AI scoring tells you which customers
-deserve your time, research builds context before the first touch, outreach plans
-keep every step organized, and an automatic follow-up engine makes sure nobody
-falls through the cracks. Email, LinkedIn and WhatsApp are channels you connect —
-B2B Outbound OS handles the pipeline, follow-up and deal tracking, while you keep
-your own sending accounts and deliverability.
+A self-hosted B2B outbound system for turning sales knowledge and customer lists
+into a repeatable sales process. A customer list tells you who exists — this turns
+it into a process that knows what to do next.
+
+**Knowledge → ICP → Research → Scoring → Strategy → Outreach → Follow-up → Sample / Quote**
+
+Build the system's knowledge of your products, ICP, buyer personas, industry
+knowledge, buying signals and sales rules. Then research each account, score it
+against your ICP, decide how to approach it, and follow the opportunity through
+outreach, sample, quote and close.
+
+**AI does not operate in a vacuum.** It uses your sales knowledge, ICP and account
+context to make downstream decisions — research, scoring, strategy and messaging
+all run on top of what you taught the system. The AI is the reasoning layer, not
+the product.
 
 **Not an email blaster.** It is the workflow layer that sits in front of your own
 mailboxes and keeps your team moving customers forward.
 
 ## What ships in this build
 
-- The complete application (Python + FastAPI, SQLite, no build step)
-- A sample workspace: **81 demo companies** across 14 countries, 170+ email
-  interactions, 22 deals, 60 scheduled touches and a pre-filled knowledge base
-- Five demo users (1 owner + 4 sales reps), so the team dashboard has something
-  to show
+- The complete application source (Python + FastAPI, SQLite, no build step)
+- A realistic sample workspace: **81 demo companies** across 14 countries, 170+
+  email interactions, 22 deals, 60 scheduled touches and a pre-filled knowledge
+  base — companies, contacts and interactions are all fictional
+- Five demo users (1 owner + 4 sales reps), so the team view has something to show
 - One-click installers for Windows / macOS / Linux
 - Sample data you can restore at any time from **System Settings → Reset demo data**
 
-No telemetry, no accounts, no subscription. It runs on your machine and your data
-never leaves it.
-
-## Add your own AI key to unlock the AI features
-
-The demo starts without any API key, so the AI is off until you switch it on.
-Put your own key in **System Settings → AI configuration** (Gemini, DeepSeek or
-OpenAI — one is enough), restart, and these start working **on the demo data**:
-
-- AI scoring of every customer (0–100, plus A–E value tiers)
-- Customer research: website / LinkedIn / hiring signals
-- Cold email and LinkedIn message generation from the built-in skills
-- Reply-intent analysis and AI quality checks on drafts
-- AI quote extraction and customer-profile coaching
-
-Your key stays in the local `.env` file; the model bills you directly at provider
-prices (usually cents per campaign). There is no fee from us and no markup.
+Self-hosted, your own mailbox, your own AI key, no telemetry, no accounts on our
+servers. Your data never leaves your machine.
 
 ## Screenshots
 
@@ -78,24 +66,48 @@ prices (usually cents per campaign). There is no fee from us and no markup.
 
 ## What's inside
 
-1. Customer pipeline with AI scoring and value tiers (A–E)
-2. Customer research: website, LinkedIn and hiring signals
-3. Multi-step outreach plans with decision-chain ordering
-4. Follow-up engine with no-reply rules and cooling periods
-5. Deals pipeline, sample tracking and quote history
-6. Knowledge base that teaches the AI about your business
-7. Team dashboard, per-rep daily targets and audit log
-8. Email center: drafts, queue, scheduled sending, inbox, bounce detection
+1. **Knowledge base — the system brain, not another feature.** Products, ICP,
+   buyer personas, industry knowledge, buying signals and sales rules in one
+   place. Everything downstream reads from it.
+2. **ICP definition** — what a high-value customer looks like for you, and what
+   to exclude.
+3. **Account research** — website and business model, products and applications,
+   LinkedIn and hiring signals, decision roles, relevant business signals.
+4. **Explainable scoring** — 0–100 against your ICP with the reasons visible:
+   what fits, what is missing, which tier it lands in.
+5. **Development strategy** — who to approach, why now, what angle, which
+   channel, what the next action is.
+6. **Outreach execution** — multi-step plans with decision-chain ordering,
+   across email, LinkedIn and WhatsApp on one customer path.
+7. **Follow-up engine** — no-reply rules and cooling periods, so nothing gets
+   dropped.
+8. **Sample / quote / close** — deals pipeline, sample tracking, quote history
+   and an email center that runs on your own mailbox.
+
+## Add your own AI key
+
+The demo starts without any API key, so the AI is off until you switch it on.
+Put your own key in **System Settings → AI configuration** (Gemini, DeepSeek or
+OpenAI — one is enough), restart, and the reasoning layer starts working **on the
+demo data**: research, scoring, strategy, message generation, reply-intent
+analysis and AI quote extraction — all driven by the knowledge you entered.
+
+Your key stays in the local `.env` file; the model bills you directly at provider
+prices (usually cents per campaign). There is no fee from us and no markup.
 
 ## First-time configuration
 
-Open **System Settings** and work through the wizard:
+Open **System Settings** and work through the wizard — in this order, because
+everything downstream depends on it:
 
 1. **Company info** — name, your name, email, website
 2. **AI configuration** — any one of Gemini / DeepSeek / OpenAI
 3. **Sending mailbox (SMTP)** — e.g. Gmail with an app password
 4. **Receiving mailbox (IMAP)** — same mailbox, used to fetch replies
-5. **Knowledge base** — tell the AI what you sell and who you target
+5. **Knowledge base** — this is where the process starts. Enter your
+   **products, ideal customer profile (ICP), buyer personas, industry knowledge,
+   buying signals and sales rules.** The system uses them for research, scoring,
+   strategy and every message it writes.
 
 AI and mailbox changes take effect after restarting the system.
 
@@ -124,6 +136,7 @@ Paste the 16-character app password, not your normal Gmail password.
 |---|---|---|
 | Application source | ✅ | ✅ |
 | Sample workspace | ✅ | clean, empty workspace |
+| Knowledge-driven research, scoring, strategy | ✅ | ✅ |
 | Evaluation and personal use | ✅ | ✅ |
 | Production / business use | ❌ needs a license | ✅ |
 | Illustrated English setup guide | — | ✅ |
@@ -157,6 +170,11 @@ Yes — this build is free to download, run and evaluate. A commercial license
 **Do I need to be technical?**
 No. Install Python 3.10, double-click two files, and you are in. The paid version
 adds an illustrated guide plus one-prompt installers for Codex / Claude Code.
+
+**Do I have to write prompts for the AI?**
+No. You fill in your knowledge base once — products, ICP, buyer personas, buying
+signals, sales rules — and the system uses it for research, scoring, strategy and
+messaging. You can edit any AI draft before it is sent.
 
 **Which email providers work?**
 Any SMTP/IMAP mailbox: Gmail (app password), Outlook, Zoho, your company mail.
