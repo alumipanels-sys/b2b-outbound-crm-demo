@@ -176,7 +176,7 @@ and generated for demonstration.
 ## Support & contact
 
 - Website: https://goprospectflow.com
-- Email: alumipanels@gmail.com
+- Email: support@goprospectflow.com
 - Questions and bug reports: please open an issue in this repository
 
 ## Contributing & changelog
