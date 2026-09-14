@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.5] - 2026-09-14
+
+### Changed
+
+- **Positioning aligned with the website.** B2B Outbound OS is a self-hosted
+  B2B outbound *system* — Knowledge → ICP → Research → Scoring → Strategy →
+  Outreach → Follow-up → Sample / Quote — not "another self-hosted CRM".
+- **README restructured:** the knowledge base is now presented as the starting
+  point of the system (the system brain), and AI is framed as the reasoning
+  layer that runs on your sales knowledge, ICP and account context.
+- **Brand:** the old name is gone from code, scripts, documents and emails;
+  everything is now B2B Outbound OS. Contact address is
+  support@goprospectflow.com and the project lives under the `b2boutbound`
+  account.
+- **AI module ships as readable source** (PyArmor removed), so the whole
+  application can be reviewed before connecting a mailbox or an AI key.
+- **Windows launcher added** (`start.bat`); the installer no longer references a
+  missing file.
+
 ## [1.0.4] - 2026-09-08
 
 ### Changed

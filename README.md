@@ -1,5 +1,7 @@
 # B2B Outbound OS — Self-Hosted B2B Outbound System (Free Demo Build)
 
+> Prospect. Reach. Follow up. Close.
+
 **Demo login:** `demo@demo.com` / `demo123456`
 **Live demo (nothing to install):** https://demo.goprospectflow.com/
 **This repository contains the complete application source, plus a sample workspace.**
