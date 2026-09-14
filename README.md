@@ -20,8 +20,6 @@ your own sending accounts and deliverability.
 **Not an email blaster.** It is the workflow layer that sits in front of your own
 mailboxes and keeps your team moving customers forward.
 
-Homepage: **https://goprospectflow.com**
-
 ## What ships in this build
 
 - The complete application (Python + FastAPI, SQLite, no build step)
